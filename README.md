@@ -1,51 +1,54 @@
-# Spotify Top30 Analysis
+# Spotify Top30 Visualization
+
+<p align="center">
+    <img src="https://i.imgur.com/mPb3Qbd.gif" width="180" alt="Politecnico di Milano"/>
+</p>
+
 [![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1W-m-ub4bFGmV7F01aa0MWEdGV1Py_iko)
-***
-For the "**Data and Results Visualization**" exam we had to present a project to show we were able to find some interesting patterns using the visualization techniques explained in the course.
+![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=flat&logo=spotify&logoColor=white)
 
-The first step of the project was to find the right dataset in order to achieve the goal; we liked the idea of scraping the **Spotify** data about top charts around the world using the provided API, so we decided to build a dataset composed by the **top 30** charts of 30 different countries between 2017 and 2020 (we have different top 30 each week).
+Spotify is a Swedish music streaming and media services provider that was founded in 2006. Since then, its popularity has grown year after year, reaching 299 million active monthly users and being available in 92 countries. These numbers, together with the ability to easily access a large amount of raw data and related services, make Spotify the perfect candidate for an analysis focused on world music preferences and their evolution over time.
 
-<p align="left">
-  <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" width="350" title="Spotify Logo">
+
+## Building the dataset
+
+Since no previous source is shaped according to our will, we started scraping from [Spotify Charts](https://spotifycharts.com/regional), a website which collects the daily regional Top200 charts for 65 countries in the world. Then, to enrich the available information for each song, we exploited the [Spotify for Developers API](https://developer.spotify.com/), which provided us additional songs' attributes, such as danceability, energy, loudness, instrumentalness and tempo.
+
+## Data exploration
+
+In the preliminary phase, the problem was introduced, showing on the map the states under investigation and the number of streams for each of them, considering also the relative population. Annual spotify statistics were also highlighted, delving into the contributions of each continent. Finally, the trend of the number of streams revealed peaks attributable to the release of albums by major international artists, such as **Drake**, **Ariana Grande** and **Post Malone**.
+
+<p align="center">
+    <img src="https://i.imgur.com/VVYnzK7.png" width="800" alt="time analysis"/>
 </p>
 
-Selected what type of data we will work with we decided to divide the notebook to present at the exam in 5 main sections:
+## Spread analysis
 
-1. **Building the Dataset**: In this step we scraped the data using the API provided by Spotify and we merged the data about the charts with the data about the attributes that Spotify gives to the songs (Danceability, Energy, Liveness, ...), usefull for further analysis.
+In this section we have selected some interesting case studies to show how national hits can impact on the global audience. We started with **Tilidin**, a german success, which was not able to cross borders, except for neighboring Austria. Same behaviour also for the italian **Soldi** which, however, differs for the peak of streams across Europe due to the Eurovision contest. If **In My Feelings** was an instant hit everywhere, much more interesting is the trend of **Dance Monkey** (in picture) which has conquered the top of the worldwide charts over the course of months.
 
-2. **Data Exploration**: In this step we explored the dataframe we have built using some visualizations of different types (2 examples are following).
-
-<p align="left">
-  <img src="Data_Exploration.png" width="800">
-</p>
-<p align="left">
-  <img src="Data_Exploration_2.png" width="772">
+<p align="center">
+    <img src="" width="800" alt="spread map"/>
 </p>
 
-3. **Spread Analysis**: In this section we performed an analysis about the spread around the world of the songs.
+## Country study
 
-<p align="left">
-  <img src="Around_The_World.png" width="772">
+In this section, we explored national music tastes based on song attributes, seeking to understand if there were any interesting relationships. For example, it turns out that in South America, songs exhibit higher **energy** and **loudness**, while **acousticness** seems accentuated in Eastern countries. Finally, Brazil clearly stands out for songs with high levels of **liveness**.
+
+<p align="center">
+    <img src="https://i.imgur.com/zpyYOdR.png" width="800" alt="country features"/>
 </p>
 
-4. **Country-Features Study**: Here we tried to find some patterns between the musical attributes of the songs and the country of them (we found that in Brazil a lot of "live" songs enter the top 30!)
+## Seasonality
 
-<p align="left">
-  <img src="Country-Features.png" width="770">
+In the last section, we looked for possible relationships between song characteristics and the time of the year in which they were released and entered the charts. Considering the songs that had a worldwide success, it is possible to find more **energy** in spring and summer, while in winter are more frequent more **acoustic** and **sadder** songs.
+
+<p align="center">
+    <img src="https://i.imgur.com/Z3MhYkf.png" width="800" alt="seasonality"/>
 </p>
 
-5. **Season-Features Study**: Here, on the contrary, we tried to find some patterns dividing the songs depending on the season they entered in the charts (a comparison about Danceability using violin plots follows).
+## Team
 
-<p align="left">
-  <img src="Season-Features.png" width="870">
-</p>
-
-***
-
-Be sure to check the notebook in order to read and to visualize all the work done by the team!
-
-The team was composed by:
-- [Meta Samuele](https://github.com/SamueleMeta)
-- [Metaj Stiven](https://github.com/StivenMetaj)
-- [Salamino Manuel](https://github.com/manuelsalamino)
-- [Serna Giuseppe](https://github.com/armando2603)
+- Samuele Meta [[Github](https://github.com/SamueleMeta)] [[Email](mailto:samuele.meta@mail.polimi.it)]
+- Stiven Metaj [[Github](https://github.com/StivenMetaj)] [[Email](mailto:stiven.metaj@mail.polimi.it)]
+- Manuel Salamino [[Github](https://github.com/manuelsalamino)] [[Email](mailto:manuel.salamino@mail.polimi.it)]
+- Giuseppe Serna [[Github](https://github.com/armando2603)] [[Email](mailto:giuseppe.serna@mail.polimi.it)]
