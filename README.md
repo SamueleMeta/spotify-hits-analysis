@@ -27,7 +27,7 @@ In the preliminary phase, the problem was introduced, showing on the map the sta
 In this section we have selected some interesting case studies to show how national hits can impact on the global audience. We started with **Tilidin**, a german success, which was not able to cross borders, except for neighboring Austria. Same behaviour also for the italian **Soldi** which, however, differs for the peak of streams across Europe due to the Eurovision contest. If **In My Feelings** was an instant hit everywhere, much more interesting is the trend of **Dance Monkey** (in picture) which has conquered the top of the worldwide charts over the course of months.
 
 <p align="center">
-    <img src="" width="800" alt="spread map"/>
+    <img src="https://github.com/SamueleMeta/spotify-hits-analysis/blob/main/map.gif" width="800" alt="spread map"/>
 </p>
 
 ## Country study
